@@ -1,0 +1,6 @@
+{
+  "name": "EthioQuiz Focus",
+  "description": "An interactive, dynamic quiz platform for high school students featuring Grades 9-12 new Ethiopian curriculum across all subjects and University Entrance Exam practice.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

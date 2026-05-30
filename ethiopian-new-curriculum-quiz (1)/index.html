@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethiopian High School Curriculum Quiz & Prep</title>
+    <meta name="description" content="Prepare for Ethiopian High School examinations with interactive quizzes, syllabus-based curriculum assessments for Grade 9-12, and verified EUEE entrance exam prep questions." />
+    <meta name="keywords" content="Ethiopia curriculum, Ethio exam, matrix prep, Ministry Exam, Grade 9-12 quizzes, EUEE university entrance exam Ethiopia, Globedock academy" />
+    <meta name="author" content="EthioQuiz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="ogdFlwQIImeyZc-cqBJfGZuPBUcTa6AR-99Oasrfv3k" />
+    
+    <!-- Open Graph for Google Discover & Social Indexing -->
+    <meta property="og:title" content="Ethiopian High School Curriculum Quiz & Prep" />
+    <meta property="og:description" content="Interactive quizzes, syllabus-aligned subject definitions, formulas, and real university entrance exam practice for Ethiopian students." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Structured Schema.org Markup for Google indexing -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalApplication",
+        "name": "Ethiopian High School Curriculum Quiz & Prep",
+        "alternateName": "EthioQuiz",
+        "description": "An interactive digital preparation platform aligned with the new Ethiopian high-school syllabus to practice and study for Grade 9, 10, 11, and 12 exams.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "ETB"
+        }
+      }
+    </script>
+
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#4f46e5" />
+    <script>
+      if ('serviceWorker' in navigator) {
+        const registerSW = () => {
+          // If in development/preview/localhost environments, unregister service workers to avoid stale cache lock
+          const isDevOrPreview = window.location.hostname.includes('ais-dev-') || 
+                                 window.location.hostname.includes('ais-pre-') || 
+                                 window.location.hostname.includes('localhost') || 
+                                 window.location.search.includes('clear');
+          
+          if (isDevOrPreview) {
+            navigator.serviceWorker.getRegistrations().then(registrations => {
+              for (let registration of registrations) {
+                registration.unregister().then(() => {
+                  console.log('Service worker cleared in preview environment to prevent stale cache.');
+                });
+              }
+            });
+            // Clear caches as well for good measure
+            if (window.caches) {
+              caches.keys().then(names => {
+                for (let name of names) caches.delete(name);
+              });
+            }
+            return;
+          }
+
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker registered successfully:', reg.scope))
+            .catch(err => console.error('Service Worker registration failed:', err));
+        };
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+          registerSW();
+        } else {
+          window.addEventListener('load', registerSW);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

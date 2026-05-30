@@ -1,0 +1,24 @@
+{
+  "short_name": "EthioQuiz",
+  "name": "Ethiopian High School Curriculum Quiz & Prep",
+  "description": "An interactive, dynamic quiz platform for high school students featuring Grades 9-12 new Ethiopian curriculum.",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/isometric/192/quiz.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "https://img.icons8.com/isometric/512/quiz.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#4f46e5",
+  "theme_color": "#4f46e5",
+  "display": "standalone",
+  "orientation": "portrait"
+}

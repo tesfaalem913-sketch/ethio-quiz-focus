@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap coordinates for Google Webmasters / Search Console
+Sitemap: https://ais-pre-qvp2krzwh2wdbndbue7mgk-96810194277.europe-west2.run.app/sitemap.xml
